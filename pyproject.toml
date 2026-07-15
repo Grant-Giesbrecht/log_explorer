@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "log-explorer"
+version = "0.1.0"
+authors = [
+  { name="Grant Giesbrecht", email="giesbrechtgrant@gmail.com" },
+]
+description = "A PyQt6 GUI for browsing, filtering and inspecting pylogfile log files."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: BSD License",
+	"Operating System :: OS Independent",
+]
+dependencies = [
+	'pylogfile >= 0.4.1',
+	'PyQt6 >= 6.4.0',
+	'h5py >= 3.11.0',
+]
+
+[project.urls]
+Homepage = "https://github.com/Grant-Giesbrecht/log-explorer"
+Issues = "https://github.com/Grant-Giesbrecht/log-explorer/issues"
+
+[project.scripts]
+log-explorer = "log_explorer.app:main"
+
+[project.license]
+file = "LICENSE"
